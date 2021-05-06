@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #8781f4;
+  background: linear-gradient(156deg, #8781f4 0%, #cf14c7 53%, #44d2f1 100%);
+  overflow: hidden;
+}
+
+.content {
+  margin: 10%;
+  padding: 1em;
+  border-radius: 10px;
+  background: #eae9f4;
+  background: linear-gradient(156deg, rgba(234, 233, 244, 0.1) 0%, rgba(255, 255, 255, 0.35) 58%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.content h1 {
+  color: #e4e7eb;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+}
+
+.content table, .content th, .content td {
+  border-collapse: collapse;
+}
+
+.content #todoList::-webkit-scrollbar {
+  display: none;
+}
+
+.content #todoList {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.content #todoList tr:nth-child(odd) {
+  background: rgba(211, 211, 211, 0.3);
+}
+
+.content #todoList td {
+  padding: 5px;
+}
+
+.content #todoList .task {
+  width: 100%;
+  font-family: 'Original Surfer', cursive;
+}
+
+.content #todoList .chkBox,
+.content #todoList .deleteBox {
+  text-align: center;
+}
+
+.content #todoList .chkBox input:hover,
+.content #todoList .deleteBox button:hover {
+  cursor: pointer;
+}
+
+.content #todoList .chkBox input {
+  vertical-align: middle;
+}
+
+.content #todoList .deleteBox button {
+  background: none;
+  border: none;
+}
+
+.content #todoList .deleteBox button i {
+  line-height: 0;
+  color: #c91a1a;
+}
+
+.content #todoList .deleteBox button i:hover {
+  color: #941414;
+}
+
+.enter-form {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.enter-form #todoInput {
+  padding: 1em;
+  border-radius: 10px;
+  opacity: 70%;
+}
+
+.enter-form #submitBtn {
+  vertical-align: middle;
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 50%;
+  opacity: 70%;
+  color: gray;
+}
+
+.enter-form #submitBtn:hover {
+  color: #dfa457;
+}
+
+@media only screen and (min-width: 541px) {
+  .content {
+    margin: auto;
+    margin-top: 8%;
+  }
+  .enter-form #todoInput {
+    width: 50%;
+    max-width: 350px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .enter-form #submitBtn {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    margin-top: 5%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgb(135,129,244);
+    background: linear-gradient(156deg, rgba(135,129,244,1) 0%, rgba(207,20,199,1) 53%, rgba(68,210,241,1) 100%);
+    overflow: hidden;
+}
+
+.content {
+    margin: 10%;
+    padding: 1em;
+    border-radius: 10px;
+    background: rgb(234,233,244);
+    background: linear-gradient(156deg, rgba(234,233,244,0.1) 0%, rgba(255,255,255,0.35) 58%, rgba(255,255,255,0.1) 100%);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    max-width: 400px;
+
+    h1 {
+        color: rgb(228, 231, 235);
+        text-align: center;
+        font-family: 'Krona One', sans-serif;
+    }
+
+    table, th, td {
+        border-collapse: collapse;
+    }
+
+    #todoList::-webkit-scrollbar {
+        display: none;
+    }
+
+    #todoList {
+        display: block;
+        width: 100%;
+        margin-top: 2em;
+        max-height: 60vh;
+        overflow-y: scroll;
+
+        tr:nth-child(odd) {
+            background: rgba(211, 211, 211, .3);
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        .task{
+            width: 100%;
+            font-family: 'Original Surfer', cursive;
+        }
+    
+        .chkBox,
+        .deleteBox {
+            text-align: center;
+        }
+
+        .chkBox input:hover,
+        .deleteBox button:hover {
+            cursor: pointer;
+        }
+
+        .chkBox input {
+            vertical-align: middle;
+        }
+
+        .deleteBox button {
+            background: none;
+            border: none;
+        }
+
+        .deleteBox button i {
+            line-height: 0;
+            color: rgb(201, 26, 26);
+        }
+
+        .deleteBox button i:hover {
+            color: rgb(148, 20, 20);
+        }
+    }
+}
+
+.enter-form {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+
+    #todoInput {
+        padding: 1em;
+        border-radius: 10px;
+        opacity: 70%;
+    }
+
+    #submitBtn {
+        vertical-align: middle;
+        font-size: 1.5em;
+        padding: 8px;
+        border-radius: 50%;
+        opacity: 70%;
+        color: gray;
+    }
+
+    #submitBtn:hover {
+        color: rgb(223, 164, 87);
+    }
+}
+
+// Media Queries
+@media only screen and (min-width: 541px) {
+    .content {
+        margin: auto;
+        margin-top:8%;
+    }
+
+    .enter-form {
+
+        #todoInput {
+        width: 50%;
+        max-width: 350px;
+        box-sizing: border-box;
+        }
+
+        #submitBtn {
+            font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .content {
+        margin-top: 5%; 
+    }
+}
